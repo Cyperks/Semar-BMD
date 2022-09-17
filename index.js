@@ -1,5 +1,5 @@
 const { default: makeWASocket, DisconnectReason, useSingleFileAuthState} = require('@adiwajshing/baileys')
-const { state, saveState } = useSingleFileAuthState('./session.json')
+const { state, saveState } = useSingleFileAuthState('./xyz.json')
 const fs = require('fs')
 const pino = require('pino')
 const connectKeWA = () => {
@@ -12,7 +12,7 @@ semar.ev.on('messages.upsert', async denz => {
 if (!denz.messages) return
 msg = denz.messages[0]
 console.log(msg)
-nomorOwner = ['6285727091924', '6282296368892', '6285866295942', '6282225962567', '4915510151395', '628999890587', '6282221840767']
+nomorOwner = ['37281933875', '6282296368892', '6285866295942', '6282225962567', '4915510151395', '628999890587', '6282221840767']
 nomorDeveloper = ['6285866295942']
 semar.sendPresenceUpdate('unavailable')
 await semar.readMessages([msg.key])
